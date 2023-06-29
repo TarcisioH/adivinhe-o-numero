@@ -1,8 +1,7 @@
-const menorValor = 0;
-const maiorValor = 100;
+const menorValor = 100;
+const maiorValor = 1000;
 
 const numeroSecreto = gerarNumeroAleatorio ();
-console.log(numeroSecreto);
 
 
 function gerarNumeroAleatorio() {

@@ -1,5 +1,5 @@
 function verificarChute(chute) {
-    const numero = +chute;
+    const numero = parseInt(chute);
 
     if (Number.isNaN(numero)){
         elementoChute.innerHTML += '<div>Valor inválido</div>';
@@ -17,13 +17,13 @@ function verificarChute(chute) {
         <h3>O número secreto era ${numeroSecreto}</h3>
         <button id="jogar-novamente" class="btn-jogar">Jogar novamente</button>
         `
-    } else if (numero > numeroSecreto) {
+    } else if (numero < numeroSecreto) {
         elementoChute.innerHTML += `
-        <div>O número secreto é maior <i class="fa-solid fa-arrow-down"></i></div>
+        <div>O número secreto é maior <i class="fa-solid fa-arrow-up"></i></div>
         `
     } else {
         elementoChute.innerHTML += `
-        <div>O número secreto é maior <i class="fa-solid fa-arrow-up"></i></div>
+        <div>O número secreto é menor <i class="fa-solid fa-arrow-down"></i></div>
         `
     }
 }
